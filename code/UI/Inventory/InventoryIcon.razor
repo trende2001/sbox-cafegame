@@ -1,0 +1,21 @@
+@using Sandbox;
+@using Sandbox.UI;
+@namespace CafeGame
+
+@inherits Panel
+
+<root class="InventoryIcon">
+	<label class="slot-number">@SlotNumber</label>
+	<label class="item-name">@ItemName</label>
+</root>
+
+@code
+{
+	public string ItemName { get; set; }
+	public int SlotNumber { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( RealTime.Now.CeilToInt(), HasClass( "active" ) );
+}

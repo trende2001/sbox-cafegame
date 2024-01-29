@@ -1,0 +1,61 @@
+@using System.Collections.Generic
+@using System.Linq
+@using Sandbox;
+@using Sandbox.UI;
+@namespace CafeGame
+
+@inherits PanelComponent
+
+<root @ref="inventoryPanel">
+	@if ( Player.Local is not null )
+	{
+
+	}
+</root>
+
+@code
+{
+	private Panel inventoryPanel { get; set; }
+	
+	readonly List<InventoryIcon> Slots = new();
+	
+	
+	protected override void OnStart()
+	{
+		base.OnStart();
+
+		int iterations = 0;
+		
+		/*
+		for ( int i = 0; i < 9; i++ )
+		{
+			var icon = new InventoryIcon( );
+			icon.ItemName = "test";
+			icon.SlotNumber = i + 1;
+
+			inventoryPanel.AddChild( icon );
+			Log.Info( $"creating inventory slot {i + 1}" );
+			Slots.Add( icon );
+		}
+		*/
+
+		for (int i = 0; i < Player.Local.Weapons.All.ToList().Count; i++)
+		{
+			var icon = new InventoryIcon();
+			icon.ItemName = "tes";
+			icon.SlotNumber = i + 1;
+
+			inventoryPanel.AddChild( icon );
+			//Log.Info( $"{weapon.DisplayName}: {iterations + 1}" );
+
+			Slots.Add( icon );
+		}
+	}
+
+
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( RealTime.Now.CeilToInt() );
+}

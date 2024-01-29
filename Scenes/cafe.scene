@@ -1,0 +1,142 @@
+{
+  "Id": "8a364dd3-6966-4844-9eb5-aed3953c488d",
+  "GameObjects": [
+    {
+      "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "Name": "Camera",
+      "Position": "-108.8261,5.790256,151.9737",
+      "Rotation": "-0.1125009,0.05917228,0.8778645,0.4617318",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 0.2
+        },
+        {
+          "__type": "Tonemapping",
+          "ExposureCompensation": 1.12,
+          "MaximumExposure": 3,
+          "MinimumExposure": 1,
+          "Rate": 2.39
+        },
+        {
+          "__type": "ColorAdjustments",
+          "Brightness": 0.89,
+          "Contrast": 1.02,
+          "HueRotate": 0,
+          "Saturation": 1.14
+        }
+      ]
+    },
+    {
+      "Id": "7c58ded9-725d-4c48-89c8-3b63cc298070",
+      "Name": "CafeMap",
+      "Position": "92.87534,79.04466,-30.9897",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "https://asset.party/trend/french_bistro",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "71962fcb-3ca4-4d4c-9e70-8a66a4d28294",
+      "Name": "GameManager",
+      "Position": "-341.0244,135.2194,19.50735",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "NetworkManager",
+          "PlayerPrefab": "prefabs/cafeplayer.prefab"
+        },
+        {
+          "__type": "WeaponManager",
+          "Prefabs": [
+            "prefabs/carriables/cup.prefab"
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "b7035eb4-2b16-4f02-9244-1cf2eb144f9a",
+      "Name": "Hud",
+      "Position": "-27.28112,-51.02454,42.28922",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "InventoryPanel"
+        }
+      ]
+    },
+    {
+      "Id": "6edfb45c-dc1d-4159-b6a2-9812ccd659ec",
+      "Name": "PostProcess",
+      "Position": "-362.1385,192.9291,48.16907",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "VolumetricFogVolume",
+          "Bounds": {
+            "Mins": "-227.8,-147.1,-55.50017",
+            "Maxs": "371.2995,330.0999,150"
+          },
+          "FalloffExponent": 1,
+          "Strength": 35.4
+        }
+      ]
+    },
+    {
+      "Id": "d7a1504d-4be8-4c61-a132-ff3e545ed5c4",
+      "Name": "Environment Light",
+      "Position": "115.0344,336.2995,158.0596",
+      "Rotation": "0.1305262,0.00000002528489,-0.991445,0.0000001920578",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "minimal",
+  "Description": "",
+  "__references": []
+}

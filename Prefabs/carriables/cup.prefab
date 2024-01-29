@@ -1,0 +1,42 @@
+{
+  "RootObject": {
+    "Id": "6b53145d-b62f-453b-85c2-b6b53a26ddcd",
+    "Name": "weapon_cup",
+    "Scale": "1.5,1.5,1.5",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Drink",
+        "ClipSize": 30,
+        "Damage": 10,
+        "DeploySound": null,
+        "DeployTime": 0.5,
+        "DisplayName": "Cup",
+        "FireRate": 3,
+        "FireSound": "sounds/physics/props/pottery_flowerpot/impact_soft_pottery.sound",
+        "HoldType": "Swing",
+        "IsDeployed": false,
+        "ReloadSoundSequence": null,
+        "ReloadTime": 2,
+        "Spread": 0.01
+      },
+      {
+        "__type": "SkinnedModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/sbox_props/bin/rubbish_cup.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "facepunch.rubbish_cup"
+  ]
+}
